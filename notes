@@ -1,52 +1,32 @@
-# -- Conky settings -- #
-background no
-update_interval 15
+conky.config = {
+	alignment = 'top_left',
+	background = true,
+	color1 = '00FF00',
+	color2 = '40FF00',
+	color3 = '80FF00',
+	color4 = 'BFFF00',
+	color5 = 'FFFF00',
+	color6 = 'FFBF00',
+	color7 = 'FF8000',
+	color8 = 'FF4000',
+	color9 = 'FF0000',
+	cpu_avg_samples = 2,
+        draw_shades = false,
+        default_color = '93A1A1',
+	double_buffer = true,
+	font = 'xft:URWGothic-Book 12',
+	gap_x = 25,
+	gap_y = 45,
+	minimum_width = 200,
+	no_buffers = true,
+	own_window = true,
+	own_window_type = 'override',
+	own_window_transparent = true,
+	update_interval = 5.0,
+	use_xft = true,
+}
+conky.text = [[
+TaskWarrior
 
-cpu_avg_samples 2
-net_avg_samples 2
-
-override_utf8_locale yes
-
-double_buffer yes
-no_buffers yes
-
-text_buffer_size 2048
-imlib_cache_size 0
-
-# -- Window specifications -- #
-
-own_window yes
-own_window_type desktop
-own_window_transparent yes
-own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
-
-border_inner_margin 0
-border_outer_margin 0
-
-minimum_size 200 80
-
-alignment tl
-gap_x 40
-gap_y 620
-
-# -- Graphics settings -- #
-draw_shades no
-draw_outline no
-draw_borders no
-draw_graph_borders no
-
-# -- Text settings -- #
-use_xft yes
-xftfont Santana:size=13
-xftalpha 0.9
-
-uppercase no
-
-default_color FFFFFF
-
-TEXT
-${font Santana:size=14}TO-DO LIST${alignr}${font Santana:size=12}(${exec task status:pending count})${font}
-${stippled_hr}
-${voffset 10}${execp ~/.Conky/viewnotes.sh}
-
-# ${stippled_hr 1}
+${execp ~/conky_config/viewnotes.sh}
+]]
