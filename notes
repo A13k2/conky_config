@@ -1,6 +1,7 @@
 conky.config = {
-	alignment = 'top_left',
+	alignment = 'bottom_right',
 	background = true,
+	color9 = 'FFFFFF',
 	color0 = '04B404',
 	color1 = '31B404',
 	color2 = '5FB404',
@@ -14,7 +15,7 @@ conky.config = {
         draw_shades = false,
         default_color = '93A1A1',
 	double_buffer = true,
-	font = 'xft:URWGothic-Book 12',
+	font = 'xft:URWGothic-Book 8',
 	gap_x = 25,
 	gap_y = 45,
 	minimum_width = 200,
@@ -22,11 +23,11 @@ conky.config = {
 	own_window = true,
 	own_window_type = 'override',
 	own_window_transparent = true,
-	update_interval = 30.0,
+	update_interval = 10.0,
 	use_xft = true,
 }
 conky.text = [[
-TaskWarrior
+${color9}TaskWarrior
 
 ${execp ~/conky_config/viewnotes.sh}
 ]]
